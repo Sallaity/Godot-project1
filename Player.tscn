@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/DOOM BOI.png" type="Texture" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://458641__mattix__retro-jump-02.wav" type="AudioStream" id=3]
+[ext_resource path="res://393818__sirkoto51__retro-game-overworld-loop-1.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 48.0099
+height = 41.3244
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( -4.46338, 16.7945 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 471.242, 323.681 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 465.855, 321.781 )
+shape = SubResource( 1 )
+
+[node name="Position2D" type="Position2D" parent="."]
+use_parent_material = true
+position = Vector2( 468.925, 327.962 )
+scale = Vector2( 5, 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 478.181, 294.661 )
+current = true
+zoom = Vector2( 2, 2 )
+smoothing_enabled = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 386.746
+margin_top = 195.282
+margin_right = 459.746
+margin_bottom = 226.282
+rect_scale = Vector2( 2.5, 2.5 )
+text = "DOOM BOI
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sounds" type="Node" parent="."]
+
+[node name="JUMP" type="AudioStreamPlayer2D" parent="sounds"]
+stream = ExtResource( 3 )
+
+[node name="MUSIC" type="AudioStreamPlayer2D" parent="sounds"]
+stream = ExtResource( 4 )
+volume_db = 0.1
+max_distance = 9.22337e+18

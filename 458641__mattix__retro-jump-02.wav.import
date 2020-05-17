@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/458641__mattix__retro-jump-02.wav-86f8b58cbc72d3b8d28a3a5cd4c88cdc.sample"
+
+[deps]
+
+source_file="res://458641__mattix__retro-jump-02.wav"
+dest_files=[ "res://.import/458641__mattix__retro-jump-02.wav-86f8b58cbc72d3b8d28a3a5cd4c88cdc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
